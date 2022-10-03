@@ -148,15 +148,9 @@ blockquote span::before {
   position: relative;
 }
 
-.header {
-  position: sticky;
-  inset-block-start: 0;
-}
-
 .header-content {
-  position: absolute;
-  inset-inline-start: -212px;
-  inset-block-start: 62px;
+  padding: 16px;
+  inset-block-start: 0;
 }
 
 header {
@@ -266,14 +260,12 @@ blockquote {
     inset-block-start: 80px;
     padding-inline: 0;
   }
-
   header {
     position: absolute;
     inset-block-start: 0;
     inset-inline-start: -208px;
     inline-size: 188px;
   }
-
   h1 {
     font-size: 60px;
     margin-block-start: 64px;
@@ -281,7 +273,6 @@ blockquote {
   img {
     inline-size: max-content;
   }
-
   blockquote {
     margin-inline: auto;
   }
