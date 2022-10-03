@@ -1,0 +1,288 @@
+:root {
+  font-size: 18px;
+  --white30: #ffffff;
+  --white20: #a5a3a5;
+  --white10: #3a3539;
+  --bg: #251f24;
+  --font-primary: "Nunito", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--white30);
+  margin: 0px;
+  background-color: #251f24;
+}
+
+a {
+  color: var(--white30);
+}
+
+header {
+  font-size: 14px;
+  color: var(--white10);
+}
+
+header a {
+  color: var(--white20);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--white30);
+}
+
+nav details summary {
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 40px;
+  margin-block-start: 20px;
+  margin-block-end: 16px;
+  font-weight: 700;
+}
+
+h2 {
+  /* margin: 64px 0 40px; */
+  margin-block-start: 20px;
+  margin-block-end: 40px;
+  margin-inline: 0;
+}
+
+hr {
+  /* margin: 64px 0; */
+  margin-block: 20px;
+  margin-inline: 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-block: 16px;
+  background-color: var(--bg);
+}
+
+pre {
+  background: var(--white10);
+  padding-block: 40px;
+  padding-inline-end: 0;
+  padding-inline-start: 40px;
+  font-family: var(--font-primary);
+  line-height: 24px;
+  overflow: auto;
+  border-radius: 8px;
+  border: 10px solid #5551ff;
+  box-shadow: -10px 10px 0 0 #abaaf6;
+  margin-block-end: 30px;
+}
+
+blockquote span {
+  color: var(--white10);
+}
+blockquote span::before {
+  content: "-";
+}
+
+.hero {
+  /* background-image: linear-gradient(to top, hsla(0, 0%, 100%, 0.25), transparent), url("../images/pattern.png"); */
+  background: #313745;
+  background-image: linear-gradient(96.07deg, #313745 30.63%, #26a0da 102.18%);
+  block-size: 350px;
+}
+
+.section-content img {
+  margin-block-start: 40px;
+  display: block;
+}
+
+.section-content h3 {
+  counter-increment: nameList;
+  /* padding-bottom: 8px; */
+  padding-block-end: 8px;
+  position: relative;
+  display: block;
+}
+.section-content h3::before {
+  content: counter(nameList, decimal) ". ";
+}
+
+.section-content {
+  counter-reset: nameList;
+}
+.section-content ol li {
+  line-height: 24px;
+}
+.section-content ul li {
+  margin-block-start: 16px;
+}
+
+.section-content + hr {
+  display: none;
+}
+
+.section-content img {
+  margin-block-start: 40px;
+  display: block;
+}
+
+.section-content:first-of-type {
+  margin: 0;
+}
+
+.wrapper {
+  max-inline-size: 902px;
+  margin: auto;
+}
+
+.header .wrapper {
+  position: relative;
+}
+
+.header {
+  position: sticky;
+  inset-block-start: 0;
+}
+
+.header-content {
+  position: absolute;
+  inset-inline-start: -212px;
+  inset-block-start: 62px;
+}
+
+header {
+  inline-size: 208px;
+  color: var(--white30);
+}
+
+header ol li {
+  margin-block-start: 16px;
+  color: var(--white20);
+}
+
+p {
+  color: var(--white20);
+}
+
+blockquote {
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  border-radius: 8px;
+  background-color: var(--white10);
+  padding: 24px;
+}
+
+blockquote :is(p, span) {
+  color: var(--white20);
+}
+/* main {
+} */
+
+.main-content {
+  padding-inline: 16px;
+}
+.slider-container {
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  overflow-x: hidden;
+  font-size: 0;
+}
+
+.video {
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  text-align: center;
+  margin-block-start: 10px;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  border-radius: 50%;
+  background: white;
+  margin-inline: 5px;
+}
+
+.form input {
+  inline-size: 100%;
+  border: 1px solid var(--white30);
+  box-sizing: border-box;
+  background: #251f24;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white30);
+  font-size: 16px;
+  display: block;
+  margin-block-end: 24px;
+  outline: none;
+}
+
+.form input[type="submit"] {
+  background: #157efb;
+  border: none;
+}
+
+.form input::placeholder {
+  color: var(--white20);
+}
+
+.img-responsive {
+  inline-size: 100%;
+}
+blockquote {
+  margin-inline: auto;
+}
+@media screen and (min-width: 1366px) {
+  .hero {
+    block-size: 350px;
+  }
+  .header {
+    position: sticky;
+    inset-block-start: -45px;
+  }
+
+  .header-content {
+    position: relative;
+    inset-block-start: 80px;
+    padding-inline: 0;
+  }
+
+  header {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -208px;
+    inline-size: 188px;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
+  img {
+    inline-size: max-content;
+  }
+
+  blockquote {
+    margin-inline: auto;
+  }
+}
